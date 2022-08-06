@@ -1,9 +1,9 @@
 -- LESSON : JOIN 
 
 -- INNER JOIN 
--- SELECT payment_id, payment.customer_id, first_name FROM customer
--- INNER JOIN payment
--- ON payment.customer_id=customer.customer_id 
+SELECT payment_id, payment.customer_id, first_name FROM customer
+INNER JOIN payment
+ON payment.customer_id=customer.customer_id 
 
 
 -- -- FULL OUTER JOIN 
@@ -12,7 +12,7 @@ FULL OUTER JOIN payment
 ON customer.customer_id = payment.customer_id
 LIMIT 50;
 
--- LEFT JOIN 
+-- -- LEFT JOIN 
 SELECT film.film_id, title, inventory.last_update
 FROM film 
 LEFT JOIN inventory
