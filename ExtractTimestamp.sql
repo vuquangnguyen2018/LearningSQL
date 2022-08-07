@@ -14,3 +14,13 @@ FROM payment;
 -- CHUYEN DATE -> STRING
 SELECT TO_CHAR(payment_date,'dd-MM-YYYY') AS payment_date
 FROM payment
+
+---EXTRACT Distinct Month
+SELECT DISTINCT(TO_CHAR(payment_date,'MONTH'))
+FROM payment
+
+--- EXTRACT So ngay trong tuan la thu 2 trong payment
+SELECT COUNT(*) 
+FROM payment
+WHERE EXTRACT(dow FROM payment_date)=1
+
